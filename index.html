@@ -12,13 +12,11 @@
         :root {
             --primary-color: #1e5a32;
             --secondary-color: #2b7a43;
-            --accent-color: #d4af37;
+            --accent-color: #d4af37; /* لون ذهبي رسمي */
             --text-dark: #333333;
-            --text-light: #f4f7f6;
-            --bg-light: #f9fbf9;
+            --bg-light: #ffffff;
         }
 
-        /* تنقل سلس في كل الموقع */
         html {
             scroll-behavior: smooth;
         }
@@ -32,53 +30,34 @@
 
         body {
             background-color: var(--bg-light);
+            /* زخرفة خلفية هندسية خفيفة جداً تعطي طابع الورق الرسمي */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e5a32' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             color: var(--text-dark);
-            line-height: 1.7;
+            line-height: 1.8;
             overflow-x: hidden;
         }
 
-        /* حركات الانيميشن (Keyframes) */
         @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(40px); }
+            0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* إضافة الحركة للعناصر */
         .animate-up {
-            animation: fadeInUp 1s ease-out forwards;
+            animation: fadeInUp 0.8s ease-out forwards;
         }
         
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
 
         header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background-color: #ffffff;
+            border-bottom: 3px solid var(--accent-color); /* خط ذهبي رسمي أعلى الموقع */
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
         }
 
         .nav-container {
@@ -87,7 +66,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 10px 20px;
         }
 
         .logo-area {
@@ -96,20 +75,20 @@
             gap: 15px;
         }
 
-        /* الشعار يطفو */
+        /* الشعار ثابت ورسمي */
         .logo-area img {
-            width: 65px;
-            animation: float 4s ease-in-out infinite;
+            width: 70px;
         }
 
         .logo-text h1 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--primary-color);
             font-weight: 900;
         }
         .logo-text p {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: gray;
+            font-weight: 600;
         }
 
         nav a {
@@ -121,12 +100,11 @@
             transition: color 0.3s ease;
         }
 
-        /* حركة الخط تحت الروابط */
         nav a::after {
             content: '';
             position: absolute;
             width: 0;
-            height: 3px;
+            height: 2px;
             bottom: -5px;
             left: 0;
             background-color: var(--accent-color);
@@ -144,19 +122,19 @@
         .hero {
             position: relative;
             background: url('https://images.unsplash.com/photo-1593113512633-288225586616?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            height: 80vh;
+            height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            background-attachment: fixed; /* تأثير Parallax */
+            border-bottom: 5px solid var(--primary-color);
         }
 
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, rgba(30, 90, 50, 0.85), rgba(43, 122, 67, 0.6));
+            background: rgba(30, 90, 50, 0.85); /* تظليل رسمي داكن */
         }
 
         .hero-content {
@@ -167,43 +145,41 @@
         }
 
         .hero-content h2 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 900;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
         }
 
         .hero-content p {
             font-size: 1.3rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            margin-bottom: 35px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
         }
 
-        /* زر بنبض مستمر وتوهج */
+        /* زر رسمي بدون حركات مبالغ بها */
         .btn-main {
-            background-color: var(--accent-color);
+            background-color: transparent;
             color: #fff;
-            padding: 15px 35px;
+            padding: 12px 35px;
             font-size: 1.1rem;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 30px;
+            border: 2px solid var(--accent-color);
+            border-radius: 4px;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            animation: pulseGlow 2s infinite;
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+            transition: all 0.3s ease;
         }
 
         .btn-main:hover {
-            background-color: #b5952f;
-            transform: scale(1.05) translateY(-3px);
-            animation: none;
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.6);
+            background-color: var(--accent-color);
+            color: #fff;
         }
 
         .section-padding {
-            padding: 100px 20px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: auto;
         }
@@ -213,50 +189,40 @@
             color: var(--primary-color);
             font-size: 2.2rem;
             font-weight: 900;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             position: relative;
         }
 
         .section-title::after {
             content: "";
-            width: 80px;
-            height: 4px;
+            width: 60px;
+            height: 3px;
             background-color: var(--accent-color);
             display: block;
             margin: 15px auto 0;
-            border-radius: 2px;
-            transition: width 0.5s ease;
-        }
-        
-        .section-title:hover::after {
-            width: 150px;
         }
 
+        /* زخرفة إطارية رسمية لقسم من نحن تشبه الشهادات */
         .about-text {
             text-align: center;
             font-size: 1.2rem;
-            color: #555;
+            color: #444;
             max-width: 900px;
             margin: auto;
             background: white;
             padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-            border-top: 5px solid var(--primary-color);
             position: relative;
-            overflow: hidden;
-            transition: transform 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            /* الزخرفة الإطارية المزدوجة */
+            border: 2px solid var(--accent-color);
+            outline: 1px solid var(--accent-color);
+            outline-offset: -8px;
         }
 
-        .about-text:hover {
-            transform: scale(1.02);
-        }
-
-        /* خلفية القسم متحركة */
         .goals-section {
-            background: linear-gradient(120deg, #f1f5f2, #e3ede6, #f1f5f2);
-            background-size: 200% 200%;
-            animation: gradientMove 10s ease infinite;
+            background-color: rgba(30, 90, 50, 0.03); /* لون خلفية هادئ جداً */
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .goals-grid {
@@ -265,40 +231,32 @@
             gap: 30px;
         }
 
-        /* بطاقات ثلاثية الأبعاد */
+        /* بطاقات رسمية بحواف مستقيمة */
         .goal-card {
             background: white;
             padding: 40px 30px;
-            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border-bottom: 4px solid transparent;
-            opacity: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid #e0e0e0;
+            border-bottom: 3px solid var(--primary-color);
+            transition: transform 0.3s ease;
         }
 
         .goal-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 0 20px 40px rgba(30, 90, 50, 0.15);
-            border-bottom: 4px solid var(--primary-color);
+            transform: translateY(-5px);
+            border-bottom: 3px solid var(--accent-color);
         }
 
         .goal-icon {
-            font-size: 3.5rem;
-            color: var(--secondary-color);
+            font-size: 3rem;
+            color: var(--primary-color);
             margin-bottom: 20px;
-            transition: transform 0.5s ease;
-        }
-
-        .goal-card:hover .goal-icon {
-            transform: rotateY(180deg) scale(1.1);
-            color: var(--accent-color);
         }
 
         .goal-card h3 {
             color: var(--primary-color);
             margin-bottom: 15px;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
         }
 
@@ -310,46 +268,37 @@
 
         .contact-item {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 20px;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            border: 1px solid #e0e0e0;
+            transition: background-color 0.3s ease;
         }
 
         .contact-item:hover {
-            transform: translateY(-5px);
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .contact-item:hover h4, .contact-item:hover p, .contact-item:hover i {
-            color: white;
+            background-color: #f9f9f9;
         }
 
         .contact-item i {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--accent-color);
             margin-bottom: 15px;
-            transition: color 0.3s ease;
         }
 
         .contact-item h4 {
             color: var(--primary-color);
             margin-bottom: 10px;
-            transition: color 0.3s ease;
+            font-weight: 700;
         }
 
         footer {
-            background-color: #11361e;
-            color: rgba(255,255,255,0.8);
+            background-color: #1e5a32;
+            color: white;
             text-align: center;
-            padding: 40px 20px;
-            position: relative;
-            overflow: hidden;
+            padding: 30px 20px;
+            border-top: 4px solid var(--accent-color);
         }
         
-        footer p { margin-bottom: 8px; font-size: 1.1rem; }
+        footer p { margin-bottom: 8px; font-size: 1rem; }
 
     </style>
 </head>
@@ -358,7 +307,8 @@
     <header>
         <div class="nav-container">
             <div class="logo-area animate-up">
-                <img src="Gemini_Generated_Image_huyp6xhuyp6xhuyp.jpg.jpg" alt="شعار المنظمة">
+                <!-- تم تصحيح اسم الشعار ليتطابق مع التعديل الأخير -->
+                <img src="Gemini_Generated_Image_huyp6xhuyp6xhuyp.jpg" alt="شعار المنظمة">
                 <div class="logo-text">
                     <h1>منظمة إبداع الأجيال</h1>
                     <p>للتنمية والتطوير (NGO)</p>

@@ -3,129 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منظمة إبداع الأجيال للتنمية والتطوير</title>
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>منظمة إبداع الأجيال للتنمية والتطوير - CGOD</title>
+    
+    <!-- استدعاء خط Cairo الاحترافي -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- استدعاء مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        :root { --primary-color: #1e4620; --secondary-color: #2e7d32; --light-bg: #f4f6f4; --dark-text: #2c3e50; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { color: var(--dark-text); line-height: 1.6; background-color: var(--light-bg); }
-        header { background-color: var(--primary-color); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .logo-text { font-size: 1.5rem; font-weight: bold; }
-        .logo-sub { font-size: 0.9rem; opacity: 0.8; display: block; }
-        nav a { color: white; text-decoration: none; margin-right: 1.5rem; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #81c784; }
-        .hero { background: linear-gradient(rgba(30, 70, 32, 0.75), rgba(30, 70, 32, 0.75)), url('https://unsplash.com') no-repeat center center/cover; color: white; text-align: center; padding: 8rem 2rem; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem; }
-        .btn { background-color: #dfa822; color: #1e4620; padding: 0.75rem 2rem; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background 0.3s; display: inline-block; }
-        .btn:hover { background-color: #ffca28; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
-        .section-title { text-align: center; color: var(--primary-color); font-size: 2.25rem; margin-bottom: 3rem; position: relative; }
-        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background-color: #dfa822; margin: 0.5rem auto 0; border-radius: 2px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
-        .card { background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid var(--secondary-color); }
-        .card i { font-size: 2.5rem; color: #dfa822; margin-bottom: 1rem; }
-        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-color); }
-        .contact-flex { display: flex; flex-wrap: wrap; gap: 3rem; margin-top: 2rem; }
-        .contact-info { flex: 1; min-width: 300px; background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .info-item { display: flex; align-items: center; margin-bottom: 1.5rem; font-size: 1.1rem; }
-        .info-item i { font-size: 1.5rem; color: var(--secondary-color); margin-left: 1rem; width: 30px; text-align: center; }
-        .map-box { flex: 1; min-width: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-height: 350px; }
-        footer { background-color: #112812; color: white; text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 4px solid #dfa822; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } header { flex-direction: column; text-align: center; gap: 1rem; } nav a { margin: 0 0.75rem; } }
+        :root {
+            --primary-color: #1e5a32;
+            --secondary-color: #2b7a43;
+            --accent-color: #d4af37;
+            --text-dark: #333333;
+            --text-light: #f4f7f6;
+            --bg-light: #f9fbf9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-area img {
+            width: 60px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 900;
+        }
+        .logo-text p {
+            font-size: 0.8rem;
+            color: gray;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1593113512633-288225586616?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(30, 90, 50, 0.75);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .btn-main {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-main:hover {
+            background-color: #b5952f;
+            transform: translateY(-3px);
+        }
+
+        .section-padding {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            display: block;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .about-text {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .goal-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .goal-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .goal-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .contact-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        
+        footer p { margin-bottom: 5px; }
+
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">
-            <span class="logo-text">منظمة إبداع الأجيال للتنمية والتطوير</span>
-            <span class="logo-sub">Creativity of Generations Organization for Development</span>
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="Gemini_Generated_Image_huyp6xhuyp6xhuyp.jpg" alt="شعار المنظمة">
+                <div class="logo-text">
+                    <h1>منظمة إبداع الأجيال</h1>
+                    <p>للتنمية والتطوير (NGO)</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#about">من نحن</a>
+                <a href="#goals">أهدافنا</a>
+                <a href="#contact">اتصل بنا</a>
+            </nav>
         </div>
-        <nav>
-            <a href="#about"><i class="fas fa-info-circle"></i> من نحن</a>
-            <a href="#goals"><i class="fas fa-bullseye"></i> أهدافنا</a>
-            <a href="#contact"><i class="fas fa-envelope"></i> اتصل بنا</a>
-        </nav>
     </header>
 
     <section class="hero">
-        <h1>منظمة إبداع الأجيال للتنمية والتطوير</h1>
-        <p>منظمة عراقية غير حكومية (NGO) مسجلة رسمياً تسعى للقضاء على الفقر والجوع، وتوفير التعليم والصحة والتنمية المستدامة للأجيال القادمة في العراق.</p>
-        <a href="#contact" class="btn"><i class="fas fa-user-plus"></i> طلب الانتماء والعضوية</a>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>منظمة إبداع الأجيال للتنمية والتطوير</h2>
+            <p>منظمة عراقية غير حكومية (NGO) مسجلة رسمياً تسعى للقضاء على الفقر والجوع، وتوفير التعليم والصحة والتنمية المستدامة للأجيال القادمة في العراق.</p>
+            <a href="رابط-استمارة-جوجل-هنا" class="btn-main" target="_blank">
+                <i class="fa-solid fa-file-signature"></i> طلب الانتماء والعضوية
+            </a>
+        </div>
     </section>
 
-    <section class="container" id="about">
+    <section id="about" class="section-padding">
         <h2 class="section-title">من نحن والحوكمة</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: #555;">
+        <div class="about-text">
             <p>تأسست المنظمة ككيان تنموي وطني رسمي يعمل تحت مظلة قانون المنظمات غير الحكومية العراقي رقم 12 لسنة 2010. نلتزم بأعلى معايير الحوكمة الرشيدة، والشفافية المالية والإدارية، من خلال لجاننا المتخصصة التابعة للهيئة الإدارية برئاسة مجلس الإدارة ومتابعة الأمانة العامة لمجلس الوزراء.</p>
         </div>
     </section>
 
-    <section style="background-color: white;">
-        <div class="container" id="goals">
-            <h2 class="section-title">أهدافنا الاستراتيجية (المادة الرابعة)</h2>
-            <div class="grid">
-                <div class="card">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>مكافحة الفقر والجوع</h3>
-                    <p>انتشال الفئات المستضعفة والعوائل المتعففة وتقديم برامج التكافل الاجتماعي والتنمية الاقتصادية المستدامة.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>التعليم الجيد والتطوير</h3>
-                    <p>إقامة الورش التدريبية، الندوات، والدورات التوعوية والمهنية لتطوير مهارات الشباب والخريجين لجميع شرائح المجتمع.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-heartbeat"></i>
-                    <h3>الصحة والرفاه</h3>
-                    <p>تعزيز خدمات الرعاية الصحية والوعي الطبي بالتنسيق مع الجهات الأكاديمية والصحية والمؤسسات الدولية والمحلية.</p>
-                </div>
+    <section id="goals" class="section-padding" style="background-color: #f1f5f2;">
+        <h2 class="section-title">أهدافنا الاستراتيجية (المادة الرابعة)</h2>
+        <div class="goals-grid">
+            
+            <div class="goal-card">
+                <i class="fa-solid fa-hands-holding-child goal-icon"></i>
+                <h3>مكافحة الفقر والجوع</h3>
+                <p>انتشال الفئات المستضعفة والعوائل المتعففة وتقديم برامج التكافل الاجتماعي والتنمية الاقتصادية المستدامة.</p>
             </div>
+
+            <div class="goal-card">
+                <i class="fa-solid fa-book-open-reader goal-icon"></i>
+                <h3>التعليم الجيد</h3>
+                <p>إقامة الورش التدريبية، الندوات، والدورات التوعوية والمهنية لتطوير مهارات الشباب والخريجين لجميع شرائح المجتمع.</p>
+            </div>
+
+            <div class="goal-card">
+                <i class="fa-solid fa-heart-pulse goal-icon"></i>
+                <h3>الصحة والرفاه</h3>
+                <p>تعزيز خدمات الرعاية الصحية والوعي الطبي بالتنسيق مع الجهات الأكاديمية والصحية والمؤسسات الدولية والمحلية.</p>
+            </div>
+
+            <!-- البطاقة الجديدة: التنمية والتطوير -->
+            <div class="goal-card">
+                <i class="fa-solid fa-seedling goal-icon"></i>
+                <h3>التنمية والتطوير</h3>
+                <p>تنمية القدرات لجميع شرائح المجتمع، وتشجيع الصناعة والابتكار ونمو الاقتصاد لدعم التنمية المستدامة.</p>
+            </div>
+
         </div>
     </section>
 
-    <section class="container" id="contact">
+    <section id="contact" class="section-padding">
         <h2 class="section-title">قنوات التواصل والمقر الرئيسي</h2>
-        <div class="contact-flex">
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <strong>البريد الإلكتروني الموحد:</strong><br>
-                        cgodngoiraq@gmail.com
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <strong>رقم الهاتف والواتساب الرسمي:</strong><br>
-                        07807938666
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <strong>المكتب والمقر الرئيسي المعتمد:</strong><br>
-                        جمهورية العراق - بغداد - قضاء أبو غريب - حي الصديق
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <strong>أوقات استلام الطلبات:</strong><br>
-                        من الأحد إلى الخميس (9:00 صباحاً - 4:00 مساءً)
-                    </div>
-                </div>
+        <div class="contact-grid">
+            
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <h4>البريد الإلكتروني الموحد</h4>
+                <p>cgodngoiraq@gmail.com</p>
             </div>
-            <div class="map-box">
-                <iframe src="https://google.com" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="contact-item">
+                <i class="fa-brands fa-whatsapp"></i>
+                <h4>رقم الهاتف والواتساب</h4>
+                <p dir="ltr">+964 780 793 8666</p>
             </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>المقر الرئيسي المعتمد</h4>
+                <p>جمهورية العراق - بغداد - قضاء أبو غريب - حي الصديق</p>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-regular fa-clock"></i>
+                <h4>أوقات استلام الطلبات</h4>
+                <p>الأحد إلى الخميس (9:00 ص - 4:00 م)</p>
+            </div>
+
         </div>
     </section>
 
     <footer>
-        <p>© 2026 جميع الحقوق محفوظة | منظمة إبداع الأجيال للتنمية والتطوير | مسجلة رسمياً في جمهورية العراق 🇮🇶</p>
+        <p>&copy; 2026 جميع الحقوق محفوظة | منظمة إبداع الأجيال للتنمية والتطوير</p>
+        <p>مسجلة رسمياً في جمهورية العراق 🇮🇶</p>
     </footer>
 
 </body>

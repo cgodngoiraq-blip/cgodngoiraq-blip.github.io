@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منظمة إبداع الأجيال للتنمية والتطوير - CGOD</title>
     
-    <!-- استدعاء خط Cairo الاحترافي -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <!-- استدعاء مكتبة الأيقونات FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -18,6 +16,11 @@
             --text-dark: #333333;
             --text-light: #f4f7f6;
             --bg-light: #f9fbf9;
+        }
+
+        /* تنقل سلس في كل الموقع */
+        html {
+            scroll-behavior: smooth;
         }
 
         * {
@@ -31,14 +34,51 @@
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.7;
+            overflow-x: hidden;
         }
 
+        /* حركات الانيميشن (Keyframes) */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* إضافة الحركة للعناصر */
+        .animate-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+
         header {
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: all 0.3s ease;
         }
 
         .nav-container {
@@ -56,8 +96,10 @@
             gap: 15px;
         }
 
+        /* الشعار يطفو */
         .logo-area img {
-            width: 60px;
+            width: 65px;
+            animation: float 4s ease-in-out infinite;
         }
 
         .logo-text h1 {
@@ -75,11 +117,28 @@
             color: var(--text-dark);
             font-weight: 700;
             margin: 0 15px;
+            position: relative;
             transition: color 0.3s ease;
+        }
+
+        /* حركة الخط تحت الروابط */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
         }
 
         nav a:hover {
             color: var(--primary-color);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
         }
 
         .hero {
@@ -91,12 +150,13 @@
             justify-content: center;
             text-align: center;
             color: white;
+            background-attachment: fixed; /* تأثير Parallax */
         }
 
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(30, 90, 50, 0.75);
+            background: linear-gradient(135deg, rgba(30, 90, 50, 0.85), rgba(43, 122, 67, 0.6));
         }
 
         .hero-content {
@@ -107,7 +167,7 @@
         }
 
         .hero-content h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -119,6 +179,7 @@
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
+        /* زر بنبض مستمر وتوهج */
         .btn-main {
             background-color: var(--accent-color);
             color: #fff;
@@ -127,20 +188,22 @@
             font-weight: 700;
             text-decoration: none;
             border-radius: 30px;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            animation: pulseGlow 2s infinite;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
         }
 
         .btn-main:hover {
             background-color: #b5952f;
-            transform: translateY(-3px);
+            transform: scale(1.05) translateY(-3px);
+            animation: none;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.6);
         }
 
         .section-padding {
-            padding: 80px 20px;
+            padding: 100px 20px;
             max-width: 1200px;
             margin: auto;
         }
@@ -150,7 +213,7 @@
             color: var(--primary-color);
             font-size: 2.2rem;
             font-weight: 900;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             position: relative;
         }
 
@@ -162,6 +225,11 @@
             display: block;
             margin: 15px auto 0;
             border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+        
+        .section-title:hover::after {
+            width: 150px;
         }
 
         .about-text {
@@ -171,10 +239,24 @@
             max-width: 900px;
             margin: auto;
             background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
             border-top: 5px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease;
+        }
+
+        .about-text:hover {
+            transform: scale(1.02);
+        }
+
+        /* خلفية القسم متحركة */
+        .goals-section {
+            background: linear-gradient(120deg, #f1f5f2, #e3ede6, #f1f5f2);
+            background-size: 200% 200%;
+            animation: gradientMove 10s ease infinite;
         }
 
         .goals-grid {
@@ -183,32 +265,41 @@
             gap: 30px;
         }
 
+        /* بطاقات ثلاثية الأبعاد */
         .goal-card {
             background: white;
             padding: 40px 30px;
-            border-radius: 15px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border-bottom: 4px solid transparent;
+            opacity: 0;
         }
 
         .goal-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(30, 90, 50, 0.15);
             border-bottom: 4px solid var(--primary-color);
         }
 
         .goal-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--secondary-color);
             margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .goal-card:hover .goal-icon {
+            transform: rotateY(180deg) scale(1.1);
+            color: var(--accent-color);
         }
 
         .goal-card h3 {
             color: var(--primary-color);
             margin-bottom: 15px;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            font-weight: 800;
         }
 
         .contact-grid {
@@ -219,32 +310,46 @@
 
         .contact-item {
             text-align: center;
-            padding: 30px;
+            padding: 40px 20px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .contact-item:hover h4, .contact-item:hover p, .contact-item:hover i {
+            color: white;
         }
 
         .contact-item i {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--accent-color);
             margin-bottom: 15px;
+            transition: color 0.3s ease;
         }
 
         .contact-item h4 {
             color: var(--primary-color);
             margin-bottom: 10px;
+            transition: color 0.3s ease;
         }
 
         footer {
-            background-color: var(--primary-color);
+            background-color: #11361e;
             color: rgba(255,255,255,0.8);
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
         }
         
-        footer p { margin-bottom: 5px; }
+        footer p { margin-bottom: 8px; font-size: 1.1rem; }
 
     </style>
 </head>
@@ -252,14 +357,14 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo-area">
-                <img src="Gemini_Generated_Image_huyp6xhuyp6xhuyp.jpg" alt="شعار المنظمة">
+            <div class="logo-area animate-up">
+                <img src="Gemini_Generated_Image_huyp6xhuyp6xhuyp.jpg.jpg" alt="شعار المنظمة">
                 <div class="logo-text">
                     <h1>منظمة إبداع الأجيال</h1>
                     <p>للتنمية والتطوير (NGO)</p>
                 </div>
             </div>
-            <nav>
+            <nav class="animate-up delay-1">
                 <a href="#about">من نحن</a>
                 <a href="#goals">أهدافنا</a>
                 <a href="#contact">اتصل بنا</a>
@@ -269,46 +374,45 @@
 
     <section class="hero">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
+        <div class="hero-content animate-up delay-2">
             <h2>منظمة إبداع الأجيال للتنمية والتطوير</h2>
             <p>منظمة عراقية غير حكومية (NGO) مسجلة رسمياً تسعى للقضاء على الفقر والجوع، وتوفير التعليم والصحة والتنمية المستدامة للأجيال القادمة في العراق.</p>
-            <a href="رابط-استمارة-جوجل-هنا" class="btn-main" target="_blank">
+            <a href="#" class="btn-main">
                 <i class="fa-solid fa-file-signature"></i> طلب الانتماء والعضوية
             </a>
         </div>
     </section>
 
     <section id="about" class="section-padding">
-        <h2 class="section-title">من نحن والحوكمة</h2>
-        <div class="about-text">
+        <h2 class="section-title animate-up">من نحن والحوكمة</h2>
+        <div class="about-text animate-up delay-1">
             <p>تأسست المنظمة ككيان تنموي وطني رسمي يعمل تحت مظلة قانون المنظمات غير الحكومية العراقي رقم 12 لسنة 2010. نلتزم بأعلى معايير الحوكمة الرشيدة، والشفافية المالية والإدارية، من خلال لجاننا المتخصصة التابعة للهيئة الإدارية برئاسة مجلس الإدارة ومتابعة الأمانة العامة لمجلس الوزراء.</p>
         </div>
     </section>
 
-    <section id="goals" class="section-padding" style="background-color: #f1f5f2;">
-        <h2 class="section-title">أهدافنا الاستراتيجية (المادة الرابعة)</h2>
+    <section id="goals" class="section-padding goals-section">
+        <h2 class="section-title animate-up">أهدافنا الاستراتيجية (المادة الرابعة)</h2>
         <div class="goals-grid">
             
-            <div class="goal-card">
+            <div class="goal-card animate-up delay-1">
                 <i class="fa-solid fa-hands-holding-child goal-icon"></i>
                 <h3>مكافحة الفقر والجوع</h3>
                 <p>انتشال الفئات المستضعفة والعوائل المتعففة وتقديم برامج التكافل الاجتماعي والتنمية الاقتصادية المستدامة.</p>
             </div>
 
-            <div class="goal-card">
+            <div class="goal-card animate-up delay-2">
                 <i class="fa-solid fa-book-open-reader goal-icon"></i>
                 <h3>التعليم الجيد</h3>
                 <p>إقامة الورش التدريبية، الندوات، والدورات التوعوية والمهنية لتطوير مهارات الشباب والخريجين لجميع شرائح المجتمع.</p>
             </div>
 
-            <div class="goal-card">
+            <div class="goal-card animate-up delay-3">
                 <i class="fa-solid fa-heart-pulse goal-icon"></i>
                 <h3>الصحة والرفاه</h3>
                 <p>تعزيز خدمات الرعاية الصحية والوعي الطبي بالتنسيق مع الجهات الأكاديمية والصحية والمؤسسات الدولية والمحلية.</p>
             </div>
 
-            <!-- البطاقة الجديدة: التنمية والتطوير -->
-            <div class="goal-card">
+            <div class="goal-card animate-up delay-4">
                 <i class="fa-solid fa-seedling goal-icon"></i>
                 <h3>التنمية والتطوير</h3>
                 <p>تنمية القدرات لجميع شرائح المجتمع، وتشجيع الصناعة والابتكار ونمو الاقتصاد لدعم التنمية المستدامة.</p>
@@ -318,28 +422,28 @@
     </section>
 
     <section id="contact" class="section-padding">
-        <h2 class="section-title">قنوات التواصل والمقر الرئيسي</h2>
+        <h2 class="section-title animate-up">قنوات التواصل والمقر الرئيسي</h2>
         <div class="contact-grid">
             
-            <div class="contact-item">
+            <div class="contact-item animate-up delay-1">
                 <i class="fa-solid fa-envelope"></i>
                 <h4>البريد الإلكتروني الموحد</h4>
                 <p>cgodngoiraq@gmail.com</p>
             </div>
 
-            <div class="contact-item">
+            <div class="contact-item animate-up delay-2">
                 <i class="fa-brands fa-whatsapp"></i>
                 <h4>رقم الهاتف والواتساب</h4>
                 <p dir="ltr">+964 780 793 8666</p>
             </div>
 
-            <div class="contact-item">
+            <div class="contact-item animate-up delay-3">
                 <i class="fa-solid fa-location-dot"></i>
                 <h4>المقر الرئيسي المعتمد</h4>
                 <p>جمهورية العراق - بغداد - قضاء أبو غريب - حي الصديق</p>
             </div>
 
-            <div class="contact-item">
+            <div class="contact-item animate-up delay-4">
                 <i class="fa-regular fa-clock"></i>
                 <h4>أوقات استلام الطلبات</h4>
                 <p>الأحد إلى الخميس (9:00 ص - 4:00 م)</p>

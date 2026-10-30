@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creativity of Generations Organization for Development - CGOD</title>
     
-    <!-- Formal International Typography & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -30,7 +29,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Cairo', sans-serif;
             scroll-behavior: smooth;
         }
 
@@ -41,7 +40,7 @@
             overflow-x: hidden;
         }
 
-        /* Navigation Header */
+        /* Header & Navigation */
         header {
             background-color: var(--primary-color);
             position: sticky;
@@ -81,10 +80,9 @@
         }
 
         .logo-text h1 {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             color: var(--accent-color);
             font-weight: 900;
-            letter-spacing: 0.5px;
         }
 
         .logo-text span {
@@ -93,12 +91,12 @@
             display: block;
             margin-top: -2px;
             opacity: 0.85;
-            letter-spacing: 0.5px;
         }
 
         nav {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -145,14 +143,14 @@
         }
 
         .hero-content h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 900;
             margin-bottom: 20px;
             color: var(--white);
         }
 
         .hero-content p {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             margin-bottom: 30px;
             opacity: 0.95;
             line-height: 1.8;
@@ -162,7 +160,7 @@
             background-color: var(--accent-color);
             color: var(--primary-color);
             padding: 14px 35px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             border-radius: var(--radius);
             font-weight: 700;
             text-decoration: none;
@@ -193,7 +191,7 @@
             color: var(--primary-color);
         }
 
-        /* General Layout */
+        /* Sections */
         .section-padding {
             padding: 70px 20px;
             max-width: 1200px;
@@ -253,7 +251,7 @@
             opacity: 0.95;
         }
 
-        /* Governance & Institutional Profile */
+        /* Governance */
         .governance-block {
             background-color: var(--white);
             padding: 35px;
@@ -271,7 +269,66 @@
             color: var(--text-muted);
         }
 
-        /* Strategic Pillars */
+        /* Leadership Grid */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .leader-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--accent-color);
+            text-align: center;
+        }
+
+        .leader-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .leader-card h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .leader-card .role {
+            color: var(--accent-hover);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .leader-card p, .leader-card ul {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .leader-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 12px;
+        }
+
+        .leader-card ul li {
+            margin-bottom: 6px;
+        }
+
+        /* Strategic Goals */
         .goals-section {
             background-color: rgba(12, 30, 54, 0.02);
             border-top: 1px solid #edf2f7;
@@ -308,7 +365,7 @@
         .goal-card h3 {
             color: var(--primary-color);
             margin-bottom: 12px;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             font-weight: 800;
         }
 
@@ -372,109 +429,139 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo-area">
                     <img src="Gemini_Generated_Image_huyp6xhuyp6xhuyp.jpg" alt="CGOD Logo" class="org-logo-img">
                     <div class="logo-text">
-                        <h1>CGOD NGO</h1>
-                        <span>Creativity of Generations Organization</span>
+                        <h1>CGOD Organization</h1>
+                        <span>Development & Progress (NGO)</span>
                     </div>
                 </div>
                 <nav>
                     <a href="#about">About Us</a>
-                    <a href="#goals">Pillars</a>
-                    <a href="#sponsorship">Partnerships</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#leadership">Leadership & Expertise</a>
+                    <a href="#goals">Our Goals</a>
+                    <a href="#sponsorship">Sponsorships</a>
+                    <a href="#contact">Contact Us</a>
                     <a href="index.html" class="lang-btn"><i class="fa-solid fa-globe"></i> العربية</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Hero Banner -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h2>Creativity of Generations Organization for Development</h2>
-            <p>An officially registered Iraqi Non-Governmental Organization dedicated to eradicating poverty, promoting health, expanding quality education, and advancing sustainable growth for future generations.</p>
+            <p>An official registered Iraqi NGO dedicated to poverty alleviation, expanding education, healthcare support, and driving sustainable development for future generations in Iraq. Officially registered with the European Union with PIC: <strong>860309394</strong>.</p>
             <a href="https://forms.gle/y2kC5vUjWTyT4PZ59" class="btn-main" target="_blank">
                 <i class="fa-solid fa-file-signature"></i> Membership Application
             </a>
         </div>
     </section>
 
-    <!-- Strategic Sponsorship Portal -->
+    <!-- Sponsorship & Strategic Partnerships Portal -->
     <div class="container" id="sponsorship">
         <section class="sponsorship-portal">
             <div class="sponsorship-content">
-                <h4>Strategic Partnerships & CSR Engagement</h4>
-                <p>We partner with international organizations, corporate donors, and healthcare providers to deliver high-impact developmental programs. We guarantee complete financial transparency, formal compliance, and statutory tax deductions for institutional sponsors.</p>
+                <h4>Sponsorships & Strategic Partnerships Portal</h4>
+                <p>We invite institutions, investors, and medical centers to contribute to sustainable development. We ensure transparency in utilizing your support, accompanied by media coverage and official tax exemptions for your companies.</p>
             </div>
             <div>
                 <a href="mailto:cgodngoiraq@gmail.com" class="btn-gold">
-                    <i class="fa-solid fa-handshake"></i> Request Sponsorship Deck
+                    <i class="fa-solid fa-handshake"></i> Request Partnership Profile
                 </a>
             </div>
         </section>
     </div>
 
-    <!-- About & Governance & Official Documents -->
+    <!-- About Us, Governance & Accreditations -->
     <section id="about" class="section-padding">
-        <h2 class="section-title">About & Institutional Governance</h2>
+        <h2 class="section-title">About Us, Governance & Accreditations</h2>
         <div class="governance-block">
-            <p>Established under Iraqi NGO Law No. 12 of 2010, CGOD adheres strictly to rigorous international standards of financial integrity and good governance. Our developmental programs are overseen by specialized operational committees reporting to the Executive Board in alignment with the General Secretariat of the Council of Ministers.</p>
+            <p>The organization was established as an official national developmental entity operating under the Iraqi NGOs Law No. 12 of 2010. We adhere to the highest standards of good governance, financial, and administrative transparency through our specialized committees chaired by the Board of Directors under the supervision of the General Secretariat of the Council of Ministers.</p>
             
-            <!-- Official Document Accreditation Buttons -->
+            <!-- Official Documents Buttons -->
             <div style="margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
                 <a href="registration-certificate.pdf" target="_blank" class="btn-gold" style="font-size: 14px; padding: 10px 20px;">
-                    <i class="fa-solid fa-file-contract"></i> View Official NGO Registration Certificate
+                    <i class="fa-solid fa-file-contract"></i> View Official Registration Certificate
                 </a>
                 <a href="cgod-profile.pdf" target="_blank" class="btn-gold" style="font-size: 14px; padding: 10px 20px;">
-                    <i class="fa-solid fa-file-pdf"></i> Download NGO Institutional Profile (PDF)
+                    <i class="fa-solid fa-file-pdf"></i> Download NGO Profile (PDF)
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Strategic Pillars -->
+    <!-- Administrative Leadership & Official Expertise -->
+    <section id="leadership" class="section-padding" style="background-color: #ffffff; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7;">
+        <h2 class="section-title">Administrative Leadership & Official Expertise</h2>
+        <div class="container">
+            <div class="leadership-grid">
+                <!-- President -->
+                <div class="leader-card">
+                    <img src="dr-nihad-profile.jpeg" alt="Dr. Nihad Abbas Kermesh" class="leader-img">
+                    <h3>Dr. Nihad Abbas Kermesh Al-Zaidi</h3>
+                    <span class="role">President | Assistant General Director at the Prime Minister's Office - National Investment Commission</span>
+                    <p>A strategic expert and certified lecturer at the Iraqi Anti-Corruption Academy (Federal Commission of Integrity). He possesses a prestigious professional and academic record supported by accredited certifications in:</p>
+                    <ul>
+                        <li>Strategic Leadership and Institutional Planning.</li>
+                        <li>Designing Organizational Structures and Job Descriptions.</li>
+                        <li>Implementation of the UN Convention against Corruption and Asset Recovery.</li>
+                        <li>Certified Training of Trainers (TOT) Diploma from the General Syndicate of Trainers.</li>
+                    </ul>
+                </div>
+                <!-- Vice President -->
+                <div class="leader-card">
+                    <img src="aws-profile.JPG" alt="Aws Nihad Abbas" class="leader-img">
+                    <h3>Aws Nihad Abbas Al-Zaidi</h3>
+                    <span class="role">Vice President | 4th-Year Medical Student - University of Baghdad</span>
+                    <p>A fourth-year medical student at the University of Baghdad, clinical researcher, and member of the Royal Society of Medicine in London (RSM) and the Royal College of Ophthalmologists. He leads the digital transformation and international relations of the organization, leveraging his academic medical background to spearhead public health and sustainable community empowerment projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Goals -->
     <section id="goals" class="section-padding goals-section">
-        <h2 class="section-title">Strategic Pillars</h2>
+        <h2 class="section-title">Our Strategic Goals</h2>
         <div class="container">
             <div class="goals-grid">
                 <div class="goal-card">
                     <i class="fa-solid fa-hands-holding-child goal-icon"></i>
                     <h3>Poverty Alleviation</h3>
-                    <p>Supporting vulnerable communities through dignified social support and sustainable economic empowerment models.</p>
+                    <p>Lifting vulnerable groups and needy families out of poverty through social solidarity and empowering development programs.</p>
                 </div>
                 <div class="goal-card">
                     <i class="fa-solid fa-book-open-reader goal-icon"></i>
                     <h3>Quality Education</h3>
-                    <p>Conducting professional workshops and skill-development initiatives for medical students, youth, and graduates.</p>
+                    <p>Conducting training workshops and seminars to develop youth and graduate skills and build professional capacities.</p>
                 </div>
                 <div class="goal-card">
                     <i class="fa-solid fa-heart-pulse goal-icon"></i>
-                    <h3>Health & Healthcare</h3>
-                    <p>Enhancing healthcare infrastructure and public health programs in partnership with medical colleges and hospitals.</p>
+                    <h3>Health & Well-being</h3>
+                    <p>Enhancing healthcare services and medical awareness in coordination with academic and health institutions.</p>
                 </div>
                 <div class="goal-card">
                     <i class="fa-solid fa-seedling goal-icon"></i>
-                    <h3>Sustainable Growth</h3>
-                    <p>Fostering innovation, youth entrepreneurship, and long-term socio-economic resilience.</p>
+                    <h3>Sustainable Development</h3>
+                    <p>Developing capabilities and encouraging innovation and developmental solutions to support the national economy and youth.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Headquarters -->
+    <!-- Contact Channels -->
     <section id="contact" class="contact-section">
-        <h2 class="section-title">Headquarters & Contact</h2>
+        <h2 class="section-title">Contact Channels & Main Headquarters</h2>
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-item">
                     <i class="fa-solid fa-envelope"></i>
-                    <h4>Official Email</h4>
+                    <h4>Unified Email</h4>
                     <p>cgodngoiraq@gmail.com</p>
                 </div>
                 <div class="contact-item">
@@ -485,12 +572,12 @@
                 <div class="contact-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <h4>Headquarters</h4>
-                    <p>Baghdad, Iraq — Abu Ghraib, Al-Siddiq District</p>
+                    <p>Iraq - Baghdad - Abu Ghraib - Al-Siddiq District</p>
                 </div>
                 <div class="contact-item">
                     <i class="fa-regular fa-clock"></i>
-                    <h4>Working Hours</h4>
-                    <p>Sunday – Thursday (9:00 AM – 4:00 PM GMT+3)</p>
+                    <h4>Response Hours</h4>
+                    <p>Sunday to Thursday (9:00 AM - 4:00 PM)</p>
                 </div>
             </div>
         </div>
@@ -498,7 +585,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Creativity of Generations Organization for Development (CGOD). Officially Registered NGO in Iraq 🇮🇶</p>
+        <p>&copy; 2026 All Rights Reserved | Creativity of Generations Organization for Development (Officially registered in Iraq 🇮🇶 and with the European Union PIC: 860309394)</p>
     </footer>
 
 </body>

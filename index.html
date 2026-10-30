@@ -269,7 +269,7 @@
             color: var(--text-muted);
         }
 
-        /* قسم القيادة والخبرات الاحترافي */
+        /* قسم القيادة والخبرات مع الصور الشخصية */
         .leadership-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -283,7 +283,17 @@
             border-radius: var(--radius);
             box-shadow: var(--shadow-md);
             border-top: 4px solid var(--accent-color);
-            text-align: right;
+            text-align: center;
+        }
+
+        .leader-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .leader-card h3 {
@@ -305,6 +315,7 @@
             color: var(--text-muted);
             font-size: 14px;
             line-height: 1.8;
+            text-align: right;
         }
 
         .leader-card ul {
@@ -485,13 +496,14 @@
         </div>
     </section>
 
-    <!-- القيادة الإدارية والخبرات والاعتمادات الرسمية -->
+    <!-- القيادة الإدارية والخبرات والاعتمادات الرسمية مع الصور -->
     <section id="leadership" class="section-padding" style="background-color: #ffffff; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7;">
         <h2 class="section-title">القيادة الإدارية والخبرات الرسمية</h2>
         <div class="container">
             <div class="leadership-grid">
                 <!-- President -->
                 <div class="leader-card">
+                    <img src="dr-nihad-profile.jpg" alt="الدكتور نهاد عباس كرمش" class="leader-img">
                     <h3>الدكتور نهاد عباس كرمش الزيدي</h3>
                     <span class="role">رئيس المنظمة</span>
                     <p>خبير استراتيجي ومحاضر معتمد لدى الأكاديمية العراقية لمكافحة الفساد (هيئة النزاهة الاتحادية). يمتلك سجلاً مهنياً وأكاديمياً عريقاً مدعوماً بشهادات معتمدة في:</p>
@@ -504,6 +516,7 @@
                 </div>
                 <!-- Vice President -->
                 <div class="leader-card">
+                    <img src="aws-profile.jpg" alt="أوس نهاد عباس" class="leader-img">
                     <h3>أوس نهاد عباس الزيدي</h3>
                     <span class="role">نائب رئيس المنظمة | طالب طب - جامعة بغداد</span>
                     <p>طالب في المرحلة الرابعة بكلية الطب بجامعة بغداد، وباحث طبي وعضو في الرابطة الملكية للأطباء في لندن (RSM) والكلية الملكية لأطباء العيون. يقود التحول الرقمي والعلاقات الدولية للمنظمة، ويسخّر خلفيته الأكاديمية الطبية لتطوير مشاريع الصحة العامة والتنمية المستدامة والتمكين المجتمعي.</p>

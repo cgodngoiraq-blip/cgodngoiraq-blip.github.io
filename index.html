@@ -26,7 +26,11 @@
         "addressLocality": "Baghdad",
         "addressCountry": "IQ"
       },
-      "identifier": "EU PIC: 860309394"
+      "identifier": [
+        "Iraqi NGO Reg: 1SC2306005",
+        "UNGM Supplier ID: 1297859",
+        "EU PIC: 860309394"
+      ]
     }
     </script>
 
@@ -484,14 +488,64 @@
             font-size: 14px;
         }
 
-        footer {
+        /* الفوتر المطور مع الاعتمادات الرسمية الثلاثة */
+        .cgod-footer {
             background-color: #061120;
-            color: #718096;
+            color: #ffffff;
+            padding: 45px 20px 25px 20px;
+            border-top: 2px solid var(--accent-color);
             text-align: center;
-            padding: 25px 20px;
         }
-        
-        footer p { font-size: 0.95rem; }
+
+        .cgod-footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cgod-badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(197, 160, 40, 0.3);
+            border-radius: var(--radius);
+            padding: 16px 24px;
+            min-width: 270px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .cgod-badge:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .cgod-badge h4 {
+            margin: 0 0 6px 0;
+            color: var(--accent-color);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .cgod-badge p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #f8f9fa;
+            direction: ltr;
+        }
+
+        .cgod-copyright {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 13.5px;
+            color: #94a3b8;
+        }
     </style>
 </head>
 <body>
@@ -760,9 +814,33 @@
         </div>
     </section>
 
-    <!-- الفوتر -->
-    <footer>
-        <p>&copy; 2026 جميع الحقوق محفوظة | منظمة إبداع الأجيال للتنمية والتطوير (مسجلة رسمياً في العراق 🇮🇶 وفي الاتحاد الأوروبي PIC: 860309394)</p>
+    <!-- الفوتر الشامل للاعتمادات الرسمية -->
+    <footer class="cgod-footer">
+        <div class="cgod-footer-container">
+            
+            <!-- الاعتماد الحكومي العراقي -->
+            <div class="cgod-badge">
+                <h4>جمهورية العراق - الأمانة العامة لمجلس الوزراء</h4>
+                <p>NGO Reg No: 1SC2306005</p>
+            </div>
+
+            <!-- اعتماد الأمم المتحدة -->
+            <div class="cgod-badge">
+                <h4>السوق العالمي للأمم المتحدة (UNGM)</h4>
+                <p>UNGM Vendor ID: #1297859</p>
+            </div>
+
+            <!-- اعتماد الاتحاد الأوروبي -->
+            <div class="cgod-badge">
+                <h4>اعتماد الاتحاد الأوروبي (EU PIC)</h4>
+                <p>EU PIC No: 860309394</p>
+            </div>
+
+        </div>
+
+        <div class="cgod-copyright">
+            &copy; 2026 جميع الحقوق محفوظة | منظمة إبداع الأجيال للتنمية والتطوير (CGOD)
+        </div>
     </footer>
 
 </body>

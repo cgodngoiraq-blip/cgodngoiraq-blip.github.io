@@ -38,6 +38,7 @@
             color: var(--text-main);
             line-height: 1.7;
             overflow-x: hidden;
+            text-align: left;
         }
 
         /* Header & Navigation */
@@ -80,7 +81,7 @@
         }
 
         .logo-text h1 {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--accent-color);
             font-weight: 900;
         }
@@ -102,8 +103,8 @@
         nav a {
             color: var(--white);
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
+            margin-left: 18px;
+            font-size: 13.5px;
             font-weight: 600;
             transition: var(--transition);
         }
@@ -143,14 +144,14 @@
         }
 
         .hero-content h2 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             font-weight: 900;
             margin-bottom: 20px;
             color: var(--white);
         }
 
         .hero-content p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             margin-bottom: 30px;
             opacity: 0.95;
             line-height: 1.8;
@@ -178,7 +179,7 @@
             background: transparent;
             color: var(--accent-color);
             border: 2px solid var(--accent-color);
-            padding: 12px 28px;
+            padding: 10px 22px;
             border-radius: var(--radius);
             font-weight: 700;
             text-decoration: none;
@@ -191,7 +192,7 @@
             color: var(--primary-color);
         }
 
-        /* Sections */
+        /* General Sections */
         .section-padding {
             padding: 70px 20px;
             max-width: 1200px;
@@ -251,7 +252,7 @@
             opacity: 0.95;
         }
 
-        /* Governance */
+        /* Governance & Accreditation */
         .governance-block {
             background-color: var(--white);
             padding: 35px;
@@ -269,7 +270,7 @@
             color: var(--text-muted);
         }
 
-        /* Leadership Grid */
+        /* Leadership Section */
         .leadership-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -326,6 +327,48 @@
 
         .leader-card ul li {
             margin-bottom: 6px;
+        }
+
+        /* Achievements & Certifications */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border-top: 3px solid var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-card i {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .cert-card h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .cert-card p {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
 
         /* Strategic Goals */
@@ -437,15 +480,16 @@
                     <img src="Gemini_Generated_Image_huyp6xhuyp6xhuyp.jpg" alt="CGOD Logo" class="org-logo-img">
                     <div class="logo-text">
                         <h1>CGOD Organization</h1>
-                        <span>Development & Progress (NGO)</span>
+                        <span>Development & Growth (NGO)</span>
                     </div>
                 </div>
                 <nav>
                     <a href="#about">About Us</a>
-                    <a href="#leadership">Leadership & Expertise</a>
-                    <a href="#goals">Our Goals</a>
+                    <a href="#leadership">Leadership</a>
+                    <a href="#achievements" style="color: var(--accent-color); font-weight: 900;"><i class="fa-solid fa-award"></i> Achievements</a>
+                    <a href="#goals">Goals</a>
                     <a href="#sponsorship">Sponsorships</a>
-                    <a href="#contact">Contact Us</a>
+                    <a href="#contact">Contact</a>
                     <a href="index.html" class="lang-btn"><i class="fa-solid fa-globe"></i> العربية</a>
                 </nav>
             </div>
@@ -456,62 +500,65 @@
     <section class="hero">
         <div class="hero-content">
             <h2>Creativity of Generations Organization for Development</h2>
-            <p>An official registered Iraqi NGO dedicated to poverty alleviation, expanding education, healthcare support, and driving sustainable development for future generations in Iraq. Officially registered with the European Union with PIC: <strong>860309394</strong>.</p>
+            <p>An officially registered non-governmental organization (NGO) dedicated to poverty alleviation, quality education, healthcare advancement, and sustainable development across Iraq.</p>
             <a href="https://forms.gle/y2kC5vUjWTyT4PZ59" class="btn-main" target="_blank">
-                <i class="fa-solid fa-file-signature"></i> Membership Application
+                <i class="fa-solid fa-file-signature"></i> Membership Application Form
             </a>
         </div>
     </section>
 
-    <!-- Sponsorship & Strategic Partnerships Portal -->
+    <!-- Strategic Sponsorship Portal -->
     <div class="container" id="sponsorship">
         <section class="sponsorship-portal">
             <div class="sponsorship-content">
-                <h4>Sponsorships & Strategic Partnerships Portal</h4>
-                <p>We invite institutions, investors, and medical centers to contribute to sustainable development. We ensure transparency in utilizing your support, accompanied by media coverage and official tax exemptions for your companies.</p>
+                <h4>Strategic Sponsorship & Partnership Portal</h4>
+                <p>We invite institutions, investors, and medical centers to collaborate on achieving sustainable development goals. We ensure complete transparency, media coverage, and official tax exemptions for corporate partners.</p>
             </div>
             <div>
                 <a href="mailto:cgodngoiraq@gmail.com" class="btn-gold">
-                    <i class="fa-solid fa-handshake"></i> Request Partnership Profile
+                    <i class="fa-solid fa-handshake"></i> Request Partnership Brief
                 </a>
             </div>
         </section>
     </div>
 
-    <!-- About Us, Governance & Accreditations -->
+    <!-- About Us & Governance -->
     <section id="about" class="section-padding">
-        <h2 class="section-title">About Us, Governance & Accreditations</h2>
+        <h2 class="section-title">About Us, Governance & Accreditation</h2>
         <div class="governance-block">
-            <p>The organization was established as an official national developmental entity operating under the Iraqi NGOs Law No. 12 of 2010. We adhere to the highest standards of good governance, financial, and administrative transparency through our specialized committees chaired by the Board of Directors under the supervision of the General Secretariat of the Council of Ministers.</p>
+            <p>Established as a national development entity operating under Iraqi NGO Law No. 12 of 2010. We adhere to the highest standards of good governance, financial transparency, and administrative rigor under the supervision of the General Secretariat of the Council of Ministers.</p>
             
             <!-- Official Documents Buttons -->
             <div style="margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
                 <a href="registration-certificate.pdf" target="_blank" class="btn-gold" style="font-size: 14px; padding: 10px 20px;">
-                    <i class="fa-solid fa-file-contract"></i> View Official Registration Certificate
+                    <i class="fa-solid fa-file-contract"></i> View Official Registration
+                </a>
+                <a href="منظمة ابداع الاجيال للتنمية والتطوير.pdf" target="_blank" class="btn-gold" style="font-size: 14px; padding: 10px 20px;">
+                    <i class="fa-solid fa-book-open"></i> View Internal Bylaws
                 </a>
                 <a href="cgod-profile.pdf" target="_blank" class="btn-gold" style="font-size: 14px; padding: 10px 20px;">
-                    <i class="fa-solid fa-file-pdf"></i> Download NGO Profile (PDF)
+                    <i class="fa-solid fa-file-pdf"></i> Download Profile (PDF)
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Administrative Leadership & Official Expertise -->
+    <!-- Leadership & Professional Expertise -->
     <section id="leadership" class="section-padding" style="background-color: #ffffff; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7;">
-        <h2 class="section-title">Administrative Leadership & Official Expertise</h2>
+        <h2 class="section-title">Administrative Leadership & Expert Credentials</h2>
         <div class="container">
             <div class="leadership-grid">
                 <!-- President -->
                 <div class="leader-card">
-                    <img src="dr-nihad-profile.jpeg" alt="Dr. Nihad Abbas Kermesh" class="leader-img">
-                    <h3>Dr. Nihad Abbas Kermesh Al-Zaidi</h3>
-                    <span class="role">President | Assistant General Director at the Prime Minister's Office - National Investment Commission</span>
-                    <p>A strategic expert and certified lecturer at the Iraqi Anti-Corruption Academy (Federal Commission of Integrity). He possesses a prestigious professional and academic record supported by accredited certifications in:</p>
+                    <img src="dr-nihad-profile.jpeg" alt="Dr. Nihad Abbas Karmash" class="leader-img">
+                    <h3>Dr. Nihad Abbas Karmash Al-Zaidi</h3>
+                    <span class="role">President | Deputy Director General at the Prime Minister's Office - National Investment Commission</span>
+                    <p>Strategic expert and certified lecturer at the Iraqi Anti-Corruption Academy (Federal Board of Supreme Audit / Integrity Commission). Possesses a distinguished professional and academic record certified in:</p>
                     <ul>
-                        <li>Strategic Leadership and Institutional Planning.</li>
-                        <li>Designing Organizational Structures and Job Descriptions.</li>
-                        <li>Implementation of the UN Convention against Corruption and Asset Recovery.</li>
-                        <li>Certified Training of Trainers (TOT) Diploma from the General Syndicate of Trainers.</li>
+                        <li>Strategic leadership, institutional planning, and oversight.</li>
+                        <li>Designing organizational structures and job descriptions.</li>
+                        <li>Implementation of UN conventions against corruption and asset recovery.</li>
+                        <li>Training of Trainers (TOT) Diploma from the General Syndicate of Trainers.</li>
                     </ul>
                 </div>
                 <!-- Vice President -->
@@ -519,8 +566,114 @@
                     <img src="aws-profile.JPG" alt="Aws Nihad Abbas" class="leader-img">
                     <h3>Aws Nihad Abbas Al-Zaidi</h3>
                     <span class="role">Vice President | 4th-Year Medical Student - University of Baghdad</span>
-                    <p>A fourth-year medical student at the University of Baghdad, clinical researcher, and member of the Royal Society of Medicine in London (RSM) and the Royal College of Ophthalmologists. He leads the digital transformation and international relations of the organization, leveraging his academic medical background to spearhead public health and sustainable community empowerment projects.</p>
+                    <p>Medical student at the University of Baghdad, clinical researcher, and member of the Royal Society of Medicine (RSM) in London and the Royal College of Ophthalmologists. Leads digital transformation and international relations, leveraging a medical background to advance public health and sustainable community development.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications Section -->
+    <section id="achievements" class="section-padding">
+        <h2 class="section-title">Achievements & Official Accreditations</h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: -20px auto 40px auto; font-size: 1.05rem;">
+            Documenting specialized expertise, international fellowships, and official credentials issued by the Royal Society of Medicine in London and the Iraqi Anti-Corruption Academy.
+        </p>
+        <div class="container">
+            <div class="achievements-grid">
+                
+                <!-- London Conferences (Royal Society of Medicine) -->
+                <div class="cert-card" style="border-top-color: #0c1e36;">
+                    <i class="fa-solid fa-notes-medical" style="color: #0c1e36;"></i>
+                    <h3>Endocrinology & Diabetes Conference (London 2026)</h3>
+                    <p>Certified Attendance & Participation (4 CPD Points) from the Royal Society of Medicine in London.</p>
+                    <a href="CERTIFICATE of ATTENDANCE (3).PDF" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View London Certificate (1)</a>
+                </div>
+
+                <div class="cert-card" style="border-top-color: #0c1e36;">
+                    <i class="fa-solid fa-eye" style="color: #0c1e36;"></i>
+                    <h3>Modern Ophthalmology Conference (London 2026)</h3>
+                    <p>Certified Attendance & Participation (5 CPD Points) from the Royal Society of Medicine.</p>
+                    <a href="CERTIFICATE of ATTENDANCE (2).PDF" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View London Certificate (2)</a>
+                </div>
+
+                <div class="cert-card" style="border-top-color: #0c1e36;">
+                    <i class="fa-solid fa-laptop-medical" style="color: #0c1e36;"></i>
+                    <h3>Digital Health Innovation & Entrepreneurship (London)</h3>
+                    <p>Certified Attendance (3 CPD Points) from the Royal Society of Medicine.</p>
+                    <a href="CERTIFICATE of ATTENDANCE (1).PDF" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View London Certificate (3)</a>
+                </div>
+
+                <!-- Iraqi Anti-Corruption Academy & Professional Certificates -->
+                <div class="cert-card">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>UN Convention Against Corruption</h3>
+                    <p>Certificate of participation and lecturing on UN conventions and the role of the Integrity Commission.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (1).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3>Training of Trainers (TOT) Diploma</h3>
+                    <p>Successful completion of 25 training hours and assessment from the Iraq Culture Foundation and General Syndicate.</p>
+                    <a href="دورة اعداد المدربين.jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Strategic Leadership & Institutional Planning</h3>
+                    <p>Certificate of appreciation for specialized lectures on strategic leadership for regulatory bodies.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (2).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <h3>Civil Law & Asset Recovery</h3>
+                    <p>Participation certificate in workshops regarding Iraqi civil law in combating corruption and recovering public funds.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (3).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <h3>Organizational Structures & Job Descriptions</h3>
+                    <p>Certificate of appreciation for lecturing on governmental institutional structuring and job descriptions.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (4)_4.jpg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h3>Basics of Planning & Monitoring</h3>
+                    <p>Certificate of appreciation for training lectures on performance enhancement and monitoring.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (5).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>International Asset Recovery Forum</h3>
+                    <p>Participation certificate in the 8th monthly forum on international agreements and asset recovery via Zoom.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (6).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h3>Institutional Performance Evaluation</h3>
+                    <p>Certificate of training in institutional performance evaluation issued by the Iraqi Academy.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.04 PM (2).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Strategic Planning (Advanced Edition)</h3>
+                    <p>Additional documentation certificate for specialized lectures in strategic planning and institutional development.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.04 PM (1).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h3>Anti-Corruption Documentation Certificate</h3>
+                    <p>Official accredited documentation from the Iraqi Anti-Corruption Academy within the leadership portfolio.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.04 PM.jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">View Certificate</a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -533,35 +686,35 @@
                 <div class="goal-card">
                     <i class="fa-solid fa-hands-holding-child goal-icon"></i>
                     <h3>Poverty Alleviation</h3>
-                    <p>Lifting vulnerable groups and needy families out of poverty through social solidarity and empowering development programs.</p>
+                    <p>Empowering vulnerable communities and supporting families through targeted social solidarity and sustainable livelihood programs.</p>
                 </div>
                 <div class="goal-card">
                     <i class="fa-solid fa-book-open-reader goal-icon"></i>
                     <h3>Quality Education</h3>
-                    <p>Conducting training workshops and seminars to develop youth and graduate skills and build professional capacities.</p>
+                    <p>Conducting specialized workshops and training seminars to build professional capacities for youth and graduates.</p>
                 </div>
                 <div class="goal-card">
                     <i class="fa-solid fa-heart-pulse goal-icon"></i>
                     <h3>Health & Well-being</h3>
-                    <p>Enhancing healthcare services and medical awareness in coordination with academic and health institutions.</p>
+                    <p>Promoting public healthcare services and medical awareness in coordination with academic and health institutions.</p>
                 </div>
                 <div class="goal-card">
                     <i class="fa-solid fa-seedling goal-icon"></i>
                     <h3>Sustainable Development</h3>
-                    <p>Developing capabilities and encouraging innovation and developmental solutions to support the national economy and youth.</p>
+                    <p>Fostering innovation and developmental solutions to support the national economy and empower youth.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Channels -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <h2 class="section-title">Contact Channels & Main Headquarters</h2>
+        <h2 class="section-title">Contact Channels & Headquarters</h2>
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-item">
                     <i class="fa-solid fa-envelope"></i>
-                    <h4>Unified Email</h4>
+                    <h4>Official Email</h4>
                     <p>cgodngoiraq@gmail.com</p>
                 </div>
                 <div class="contact-item">
@@ -576,7 +729,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fa-regular fa-clock"></i>
-                    <h4>Response Hours</h4>
+                    <h4>Working Hours</h4>
                     <p>Sunday to Thursday (9:00 AM - 4:00 PM)</p>
                 </div>
             </div>
@@ -585,7 +738,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 All Rights Reserved | Creativity of Generations Organization for Development (Officially registered in Iraq 🇮🇶 and with the European Union PIC: 860309394)</p>
+        <p>&copy; 2026 All Rights Reserved | Creativity of Generations Organization for Development (Officially Registered in Iraq 🇮🇶 & EU PIC: 860309394)</p>
     </footer>
 
 </body>

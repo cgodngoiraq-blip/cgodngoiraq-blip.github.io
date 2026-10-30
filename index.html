@@ -102,8 +102,8 @@
         nav a {
             color: var(--white);
             text-decoration: none;
-            margin-right: 20px;
-            font-size: 14px;
+            margin-right: 18px;
+            font-size: 13.5px;
             font-weight: 600;
             transition: var(--transition);
         }
@@ -178,7 +178,7 @@
             background: transparent;
             color: var(--accent-color);
             border: 2px solid var(--accent-color);
-            padding: 12px 28px;
+            padding: 10px 22px;
             border-radius: var(--radius);
             font-weight: 700;
             text-decoration: none;
@@ -269,7 +269,7 @@
             color: var(--text-muted);
         }
 
-        /* قسم القيادة والخبرات مع الصور الشخصية */
+        /* قسم القيادة والخبرات */
         .leadership-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -326,6 +326,48 @@
 
         .leader-card ul li {
             margin-bottom: 6px;
+        }
+
+        /* معرض الشهادات والإنجازات */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border-top: 3px solid var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-card i {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .cert-card h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .cert-card p {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
 
         /* شبكة الأهداف */
@@ -443,6 +485,7 @@
                 <nav>
                     <a href="#about">من نحن</a>
                     <a href="#leadership">القيادة والخبرات</a>
+                    <a href="#achievements" style="color: var(--accent-color); font-weight: 900;"><i class="fa-solid fa-award"></i> إنجازات الأعضاء</a>
                     <a href="#goals">أهدافنا</a>
                     <a href="#sponsorship">الرعايات</a>
                     <a href="#contact">اتصل بنا</a>
@@ -521,6 +564,89 @@
                     <span class="role">نائب رئيس المنظمة | طالب طب - جامعة بغداد</span>
                     <p>طالب في المرحلة الرابعة بكلية الطب بجامعة بغداد، وباحث طبي وعضو في الرابطة الملكية للأطباء في لندن (RSM) والكلية الملكية لأطباء العيون. يقود التحول الرقمي والعلاقات الدولية للمنظمة، ويسخّر خلفيته الأكاديمية الطبية لتطوير مشاريع الصحة العامة والتنمية المستدامة والتمكين المجتمعي.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم إنجازات الأعضاء والشهادات المعتمدة (بالأسماء الفعلية للملفات المرفوعة) -->
+    <section id="achievements" class="section-padding">
+        <h2 class="section-title">سجل إنجازات واعترافات أعضاء المنظمة</h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: -20px auto 40px auto; font-size: 1.05rem;">
+            توثيقاً للخبرات التخصصية والاعتمادات الرسمية لرئاسة وأعضاء المنظمة الصادرة عن الأكاديمية العراقية لمكافحة الفساد والمؤسسات المهنية المعتمدة.
+        </p>
+        <div class="container">
+            <div class="achievements-grid">
+                
+                <div class="cert-card">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>اتفاقية الأمم المتحدة لمكافحة الفساد</h3>
+                    <p>شهادة مشاركة وإلقاء محاضرات تخصصية في إيضاح جوانب اتفاقية الأمم المتحدة ودور هيئة النزاهة الاتحادية.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (1).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3>دبلوم إعداد المدربين (TOT)</h3>
+                    <p>إتمام متطلبات دورة إعداد المدربين بمعدل (25) ساعة تدريبية واجتياز التقييم بنجاح من مؤسسة العراق للثقافة والنقابة العامة.</p>
+                    <a href="دورة اعداد المدربين.jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>القيادة الاستراتيجية والتخطيط المؤسسي</h3>
+                    <p>شهادة تقديرية عن إلقاء محاضرات تخصصية في القيادة الاستراتيجية والتخطيط المؤسسي لتطوير المؤسسات الرقابية.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (2).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <h3>دور القانون المدني واسترداد الأموال</h3>
+                    <p>شهادة مشاركة في ورشة العمل الموسومة (دور القانون المدني العراقي في مكافحة العقود الفاسدة واسترداد الأموال العامة).</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (3).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <h3>إعداد الهيكل التنظيمي والوصف الوظيفي</h3>
+                    <p>شهادة تقديرية عن إلقاء محاضرات في الدورة التدريبية الموسومة (إعداد الهيكل التنظيمي والوصف الوظيفي للمؤسسات الحكومية).</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (4).jpg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h3>أساسيات التخطيط والمتابعة</h3>
+                    <p>شهادة تقديرية عن إلقاء محاضرات في الدورة التدريبية الموسومة (أساسيات التخطيط والمتابعة) لتطوير الأداء المؤسسي.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (5).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>الملتقى الدولي لاسترداد الأموال</h3>
+                    <p>شهادة مشاركة في الملتقى الشهري الثامن الموسوم (الاتفاقيات الدولية وأثرها في استرداد الأموال) عبر منصة Zoom.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.03 PM (6).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h3>تقييم الأداء المؤسسي للجهات الرقابية</h3>
+                    <p>شهادة تقديرية عن المحاضرات التدريبية في (تقييم الأداء المؤسسي للجهات الرقابية) الصادرة من الأكاديمية العراقية.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.04 PM (2).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>القيادة الاستراتيجية والتخطيط (إصدار إضافي)</h3>
+                    <p>شهادة تقديرية توثيقية إضافية لإلقاء المحاضرات التخصصية في القيادة الاستراتيجية والتخطيط والتطوير المؤسسي.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.04 PM (1).jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h3>الشهادة التوثيقية الإضافية (مكافحة الفساد)</h3>
+                    <p>وثيقة توثيقية رسمية إضافية معتمدة من الأكاديمية العراقية لمكافحة الفساد ضمن السجل المهني للقيادة.</p>
+                    <a href="WhatsApp Image 2026-10-13 at 10.53.04 PM.jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
+                </div>
+
             </div>
         </div>
     </section>

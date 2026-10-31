@@ -90,6 +90,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .logo-area {
@@ -126,6 +128,7 @@
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+            gap: 4px 0;
         }
 
         nav a {
@@ -245,6 +248,14 @@
             margin: 12px auto 0;
         }
 
+        .section-intro {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: -20px auto 40px auto;
+            font-size: 1.05rem;
+        }
+
         /* بوابة الرعايات والشراكات */
         .sponsorship-portal {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
@@ -357,12 +368,32 @@
             margin-bottom: 6px;
         }
 
-        /* قسم الإنجازات */
+        /* قسم الشهادات */
+        .cert-group-title {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin: 45px 0 5px 0;
+            padding-right: 14px;
+            border-right: 4px solid var(--accent-color);
+        }
+
+        .cert-group-title:first-of-type {
+            margin-top: 10px;
+        }
+
+        .cert-group-sub {
+            color: var(--text-muted);
+            font-size: 13.5px;
+            padding-right: 18px;
+            margin-bottom: 5px;
+        }
+
         .achievements-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .cert-card {
@@ -397,6 +428,68 @@
             font-size: 13px;
             line-height: 1.6;
             margin-bottom: 15px;
+        }
+
+        /* قسم الإنجازات والمشاريع */
+        .notice-box {
+            background: var(--white);
+            border-right: 4px solid var(--accent-color);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            padding: 22px 28px;
+            max-width: 900px;
+            margin: 0 auto 35px auto;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .notice-box strong {
+            color: var(--primary-color);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: var(--white);
+            padding: 30px 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            border-bottom: 3px solid var(--accent-color);
+            text-align: center;
+        }
+
+        .project-card i {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 13.5px;
+            line-height: 1.7;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(197, 160, 40, 0.15);
+            color: var(--accent-hover);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 3px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
         }
 
         /* شبكة الأهداف */
@@ -443,6 +536,85 @@
         .goal-card p {
             color: var(--text-muted);
             font-size: 14px;
+        }
+
+        /* قسم السياسات */
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            align-items: start;
+        }
+
+        .policy-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            border: 1px solid #e2e8f0;
+            border-top: 3px solid var(--accent-color);
+            overflow: hidden;
+        }
+
+        .policy-card summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 1.05rem;
+        }
+
+        .policy-card summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .policy-card summary i {
+            color: var(--accent-hover);
+            font-size: 1.4rem;
+            width: 28px;
+            text-align: center;
+        }
+
+        .policy-card summary::after {
+            content: "\f078";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 12px;
+            margin-right: auto;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .policy-card[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .policy-card ul {
+            list-style-type: disc;
+            padding: 0 42px 20px 22px;
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .policy-card ul li {
+            margin-bottom: 5px;
+        }
+
+        .policy-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .policy-note a {
+            color: var(--accent-hover);
+            font-weight: 700;
+            text-decoration: none;
         }
 
         /* قسم التواصل */
@@ -546,6 +718,12 @@
             font-size: 13.5px;
             color: #94a3b8;
         }
+
+        @media (max-width: 600px) {
+            .hero-content h2 { font-size: 2rem; }
+            .section-title { font-size: 1.7rem; }
+            .policy-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -563,9 +741,11 @@
                 </div>
                 <nav>
                     <a href="#about">من نحن</a>
-                    <a href="#leadership">القيادة والخبرات</a>
-                    <a href="#achievements" style="color: var(--accent-color); font-weight: 900;"><i class="fa-solid fa-award"></i> قسم الإنجازات</a>
+                    <a href="#leadership">القيادة</a>
+                    <a href="#certificates"><i class="fa-solid fa-award"></i> الشهادات والخبرات</a>
+                    <a href="#achievements" style="color: var(--accent-color); font-weight: 900;"><i class="fa-solid fa-diagram-project"></i> الإنجازات والمشاريع</a>
                     <a href="#goals">أهدافنا</a>
+                    <a href="#policies">السياسات</a>
                     <a href="#sponsorship">الرعايات</a>
                     <a href="#contact">اتصل بنا</a>
                     <a href="index-en.html" class="lang-btn"><i class="fa-solid fa-globe"></i> English</a>
@@ -590,7 +770,7 @@
         <section class="sponsorship-portal">
             <div class="sponsorship-content">
                 <h4>بوابة الرعايات والشراكات الاستراتيجية</h4>
-                <p>ندعو المؤسسات والمستثمرين والمراكز الطبية للمساهمة في تحقيق التنمية المستدامة. نضمن إيصال دعمكم بشفافية عالية مع توفير التغطية الإعلامية والإعفاءات الضريبية الرسمية لشركاتكم.</p>
+                <p>ندعو المؤسسات والمستثمرين والمراكز الطبية للمساهمة في تحقيق التنمية المستدامة. نضمن إيصال دعمكم بشفافية عالية مع توفير التغطية الإعلامية والوثائق الرسمية اللازمة لإجراءاتكم المحاسبية وفق القوانين والتعليمات النافذة.</p>
             </div>
             <div>
                 <a href="mailto:cgodngoiraq@gmail.com" class="btn-gold">
@@ -621,7 +801,7 @@
         </div>
     </section>
 
-    <!-- القيادة الإدارية والخبرات والاعتمادات الرسمية مع الصور -->
+    <!-- القيادة الإدارية -->
     <section id="leadership" class="section-padding" style="background-color: #ffffff; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7;">
         <h2 class="section-title">القيادة الإدارية والخبرات الرسمية</h2>
         <div class="container">
@@ -644,44 +824,50 @@
                     <img src="aws-profile.JPG" alt="أوس نهاد عباس" class="leader-img">
                     <h3>أوس نهاد عباس الزيدي</h3>
                     <span class="role">نائب رئيس المنظمة | طالب طب - جامعة بغداد</span>
-                    <p>طالب في المرحلة الرابعة بكلية الطب بجامعة بغداد، وباحث طبي وعضو في الرابطة الملكية للأطباء في لندن (RSM) والكلية الملكية لأطباء العيون. يقود التحول الرقمي والعلاقات الدولية للمنظمة، ويسخّر خلفيته الأكاديمية الطبية لتطوير مشاريع الصحة العامة والتنمية المستدامة والتمكين المجتمعي.</p>
+                    <p>طالب في المرحلة الرابعة بكلية الطب بجامعة بغداد، وباحث طبي وعضو طالب في الجمعية الملكية للطب في لندن (RSM). يقود التحول الرقمي والعلاقات الدولية للمنظمة، ويسخّر خلفيته الأكاديمية الطبية لتطوير مشاريع الصحة العامة والتنمية المستدامة والتمكين المجتمعي.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم الإنجازات والشهادات المعتمدة -->
-    <section id="achievements" class="section-padding">
-        <h2 class="section-title">قسم الإنجازات والاعتمادات الرسمية</h2>
-        <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: -20px auto 40px auto; font-size: 1.05rem;">
-            توثيقاً للخبرات التخصصية والاعتمادات الدولية والمحلية لرئاسة وأعضاء المنظمة الصادرة عن الرابطة الملكية للأطباء في لندن والأكاديمية العراقية لمكافحة الفساد.
+    <!-- قسم الشهادات والخبرات المهنية -->
+    <section id="certificates" class="section-padding">
+        <h2 class="section-title">الشهادات والخبرات المهنية</h2>
+        <p class="section-intro">
+            توثيقاً للخبرات التخصصية والشهادات الدولية والمحلية لرئاسة وأعضاء المنظمة الصادرة عن الجمعية الملكية للطب في لندن والأكاديمية العراقية لمكافحة الفساد وجهات التدريب المعتمدة.
         </p>
         <div class="container">
+
+            <!-- المجموعة الأولى: لندن -->
+            <h3 class="cert-group-title">شهادات الجمعية الملكية للطب - لندن</h3>
+            <p class="cert-group-sub">شهادات حضور ومشاركة في مؤتمرات طبية متخصصة (نقاط التطوير المهني المستمر CPD).</p>
             <div class="achievements-grid">
-                
-                <!-- شهادات مؤتمرات لندن -->
                 <div class="cert-card" style="border-top-color: #0c1e36;">
                     <i class="fa-solid fa-notes-medical" style="color: #0c1e36;"></i>
                     <h3>مؤتمر الغدد الصماء والسكري (لندن 2026)</h3>
-                    <p>شهادة حضور ومشاركة معتمدة (4 نقاط CPD) من الرابطة الملكية للأطباء في لندن (The Royal Society of Medicine).</p>
+                    <p>شهادة حضور ومشاركة معتمدة (4 نقاط CPD) من الجمعية الملكية للطب في لندن (The Royal Society of Medicine).</p>
                     <a href="CERTIFICATE of ATTENDANCE (3).PDF" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة شهادة لندن (1)</a>
                 </div>
 
                 <div class="cert-card" style="border-top-color: #0c1e36;">
                     <i class="fa-solid fa-eye" style="color: #0c1e36;"></i>
                     <h3>مؤتمر طب العيون الحديث (لندن 2026)</h3>
-                    <p>شهادة حضور ومشاركة معتمدة (5 نقاط CPD) للمؤتمر التخصصي للرابطة الملكية للأطباء في لندن.</p>
+                    <p>شهادة حضور ومشاركة معتمدة (5 نقاط CPD) للمؤتمر التخصصي للجمعية الملكية للطب في لندن.</p>
                     <a href="CERTIFICATE of ATTENDANCE (2).PDF" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة شهادة لندن (2)</a>
                 </div>
 
                 <div class="cert-card" style="border-top-color: #0c1e36;">
                     <i class="fa-solid fa-laptop-medical" style="color: #0c1e36;"></i>
                     <h3>الابتكار وريادة الأعمال بالصحة الرقمية (لندن)</h3>
-                    <p>شهادة حضور مؤتمر ريادة الأعمال والابتكار في الصحة الرقمية (3 نقاط CPD) من الرابطة الملكية للأطباء.</p>
+                    <p>شهادة حضور مؤتمر ريادة الأعمال والابتكار في الصحة الرقمية (3 نقاط CPD) من الجمعية الملكية للطب في لندن.</p>
                     <a href="CERTIFICATE of ATTENDANCE (1).PDF" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة شهادة لندن (3)</a>
                 </div>
+            </div>
 
-                <!-- شهادات الأكاديمية العراقية لمكافحة الفساد -->
+            <!-- المجموعة الثانية: العراق -->
+            <h3 class="cert-group-title">شهادات الأكاديمية العراقية لمكافحة الفساد والتدريب</h3>
+            <p class="cert-group-sub">شهادات مشاركة وتقدير عن محاضرات ودورات وورش عمل في الحوكمة والتخطيط المؤسسي والنزاهة.</p>
+            <div class="achievements-grid">
                 <div class="cert-card">
                     <i class="fa-solid fa-award"></i>
                     <h3>اتفاقية الأمم المتحدة لمكافحة الفساد</h3>
@@ -751,7 +937,44 @@
                     <p>وثيقة توثيقية رسمية إضافية معتمدة من الأكاديمية العراقية لمكافحة الفساد ضمن السجل المهني للقيادة.</p>
                     <a href="WhatsApp Image 2026-10-13 at 10.53.04 PM.jpeg" target="_blank" class="btn-gold" style="font-size: 12px; padding: 6px 14px;">معاينة الشهادة</a>
                 </div>
+            </div>
 
+        </div>
+    </section>
+
+    <!-- قسم الإنجازات والمشاريع -->
+    <section id="achievements" class="section-padding" style="background-color: #ffffff; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7;">
+        <h2 class="section-title">الإنجازات والمشاريع</h2>
+        <div class="container">
+            <div class="notice-box">
+                <strong><i class="fa-solid fa-circle-info"></i> منظمة حديثة التأسيس.</strong>
+                نلتزم بنشر مشاريعنا ونتائجها وتقاريرنا في هذا القسم فور تنفيذها وتوثيقها. المبادرات التالية <strong>قيد التخطيط</strong> ولم تُنفَّذ بعد.
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <span class="status-badge">قيد التخطيط</span><br>
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <h3>حملة توعية صحية</h3>
+                    <p>حملة توعية صحية مجتمعية في قضاء أبو غريب بمشاركة متطوعين من طلبة الطب وبإشراف مختصين.</p>
+                </div>
+                <div class="project-card">
+                    <span class="status-badge">قيد التخطيط</span><br>
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>يوم فحص البصر المجاني</h3>
+                    <p>فحص أولي للبصر للأهالي بإشراف أطباء مختصين مرخصين، مع إحالة الحالات التي تحتاج متابعة.</p>
+                </div>
+                <div class="project-card">
+                    <span class="status-badge">قيد التخطيط</span><br>
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3>ورش تدريب الشباب والخريجين</h3>
+                    <p>ورش لتطوير المهارات المهنية والإدارية للشباب والخريجين، بالاستفادة من خبرات المدربين المعتمدين في المنظمة.</p>
+                </div>
+                <div class="project-card">
+                    <span class="status-badge">قيد التخطيط</span><br>
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <h3>مبادرة التكافل الاجتماعي</h3>
+                    <p>دعم العوائل المتعففة عبر حملات جمع وتوزيع موثقة وشفافة وفق سياسات المنظمة المالية.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -782,6 +1005,103 @@
                     <p>تنمية القدرات وتشجيع الابتكار والحلول التنموية لدعم الاقتصاد الوطني والشباب.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- قسم السياسات والالتزامات -->
+    <section id="policies" class="section-padding">
+        <h2 class="section-title">السياسات والالتزامات المؤسسية</h2>
+        <p class="section-intro">
+            نلتزم بالسياسات التالية في جميع أنشطتنا ومشاريعنا وشراكاتنا. اضغط على أي سياسة لعرض أبرز بنودها.
+        </p>
+        <div class="container">
+            <div class="policy-grid">
+
+                <details class="policy-card">
+                    <summary><i class="fa-solid fa-ban"></i> مكافحة الاحتيال والفساد</summary>
+                    <ul>
+                        <li>عدم التسامح مطلقاً مع الرشوة والاحتيال والمحسوبية.</li>
+                        <li>يُحظر قبول أو تقديم أي هدية أو منفعة مقابل قرار أو خدمة.</li>
+                        <li>يُبلَّغ عن أي اشتباه للهيئة الإدارية ويُحقَّق فيه بسرية.</li>
+                        <li>تُحال المخالفات المثبتة إلى الجهات القانونية المختصة.</li>
+                    </ul>
+                </details>
+
+                <details class="policy-card">
+                    <summary><i class="fa-solid fa-child-reaching"></i> حماية الأطفال</summary>
+                    <ul>
+                        <li>سلامة الطفل وكرامته أولوية فوق كل اعتبار في أي نشاط.</li>
+                        <li>لا يُترك أي عامل أو متطوع منفرداً مع طفل أثناء الأنشطة.</li>
+                        <li>لا يُصوَّر الأطفال ولا تُنشر صورهم أو بياناتهم إلا بموافقة خطية من ولي الأمر.</li>
+                        <li>يوقّع جميع العاملين والمتطوعين تعهداً بالالتزام بهذه السياسة قبل المشاركة.</li>
+                    </ul>
+                </details>
+
+                <details class="policy-card">
+                    <summary><i class="fa-solid fa-shield-heart"></i> منع الاستغلال والاعتداء الجنسي (PSEA)</summary>
+                    <ul>
+                        <li>حظر مطلق لأي استغلال أو اعتداء جنسي أو ابتزاز بحق المستفيدين.</li>
+                        <li>المساعدات مجانية ولا يُطلب من أي مستفيد أي مقابل للحصول عليها.</li>
+                        <li>تُمنع العلاقات الجنسية بين العاملين والمستفيدين.</li>
+                        <li>حماية المبلّغين بحسن نية من أي انتقام.</li>
+                    </ul>
+                </details>
+
+                <details class="policy-card">
+                    <summary><i class="fa-solid fa-scale-unbalanced-flip"></i> تضارب المصالح</summary>
+                    <ul>
+                        <li>يُفصح كل عضو عن أي مصلحة شخصية أو عائلية ترتبط بأي قرار.</li>
+                        <li>لا يشارك صاحب المصلحة في النقاش أو التصويت على القرار المعني.</li>
+                        <li>تشمل السياسة الأقارب حتى الدرجة الثانية.</li>
+                        <li>يُسجَّل الإفصاح في محضر الاجتماع.</li>
+                    </ul>
+                </details>
+
+                <details class="policy-card">
+                    <summary><i class="fa-solid fa-cart-shopping"></i> المشتريات والتعاقدات</summary>
+                    <ul>
+                        <li>الشراء بحسب حاجة موثقة وبأفضل قيمة مقابل المال.</li>
+                        <li>مقارنة ثلاثة عروض أسعار على الأقل فوق الحد المالي الذي تقرره الهيئة الإدارية.</li>
+                        <li>يوثَّق قرار الاختيار كتابياً ويُحفظ في سجلات المنظمة.</li>
+                        <li>لا يُتعامل مع جهات لأحد الأعضاء مصلحة فيها دون إفصاح مسبق، ولا مع جهات مدرجة بقوائم العقوبات.</li>
+                    </ul>
+                </details>
+
+                <details class="policy-card">
+                    <summary><i class="fa-solid fa-file-invoice-dollar"></i> الشفافية المالية</summary>
+                    <ul>
+                        <li>تُدار الأموال عبر حساب مصرفي باسم المنظمة، وتُوثَّق كل الإيرادات والمصروفات بمستندات.</li>
+                        <li>لا تُقبل أي مبالغ نقدية دون إيصال رسمي.</li>
+                        <li>تُعرض الميزانية على الهيئة العامة للمصادقة عليها.</li>
+                        <li>يُصدر تقرير مالي وتقرير أنشطة سنوي.</li>
+                    </ul>
+                </details>
+
+                <details class="policy-card">
+                    <summary><i class="fa-solid fa-handshake-angle"></i> مدونة السلوك</summary>
+                    <ul>
+                        <li>النزاهة والاحترام وعدم التمييز بسبب الدين أو القومية أو الجنس.</li>
+                        <li>عدم استخدام اسم المنظمة أو مواردها للدعاية الحزبية.</li>
+                        <li>الحفاظ على سرية المعلومات وعلى ممتلكات المنظمة.</li>
+                        <li>الالتزام بالنظام الداخلي والتعليمات الصادرة عن الهيئة الإدارية.</li>
+                    </ul>
+                </details>
+
+                <details class="policy-card">
+                    <summary><i class="fa-solid fa-comments"></i> الشكاوى والإبلاغ</summary>
+                    <ul>
+                        <li>يحق لأي مستفيد أو متطوع أو شريك تقديم شكوى أو بلاغ عبر قنوات التواصل المنشورة.</li>
+                        <li>تُعالج الشكاوى بسرية، ويُبلَّغ صاحبها بنتيجتها.</li>
+                        <li>لا انتقام من أي شخص يبلّغ بحسن نية.</li>
+                        <li>تُحال المخالفات الجسيمة إلى الجهات المختصة.</li>
+                    </ul>
+                </details>
+
+            </div>
+            <p class="policy-note">
+                النسخ الكاملة للسياسات متاحة عند الطلب، وللشكاوى والإبلاغ:
+                <a href="mailto:cgodngoiraq@gmail.com">cgodngoiraq@gmail.com</a>
+            </p>
         </div>
     </section>
 
